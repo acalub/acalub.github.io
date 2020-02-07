@@ -1,13 +1,13 @@
 <template>
   <v-card flat tile class="product">
-    <v-img class="img" :src="productHeroImageSrc" aspect-ratio="1"></v-img> 
+    <v-img @click="$emit('show-carousel', id)" class="img" :src="productHeroImageSrc" aspect-ratio="1"></v-img> 
     <div class="imgAccent" :style="{ 'background-image': productHeroImage }"></div>
     <div class="details">
-      <div><a :href="link" :title="name"><h4>{{name}}</h4></a></div>
+      <div><a :href="link" :title="productName"><h4>{{productName}}</h4></a></div>
       <div class="d-flex price-reviews">
         <div class="flex-grow-1">{{msrp}}</div>
         <div class="flex-grow-1">
-          <v-icon small v-for="(star, index) in stars" :key="index" :class>mdi-star</v-icon>
+          <v-icon small v-for="(star, index) in stars" :key="index" :style="{opacity:star.opacity}">mdi-star</v-icon>
         </div>
       </div>
     </div>
@@ -15,11 +15,20 @@
 </template>
 <script>
 
+import { decode } from '@/lib/utils';
+
 export default {
-  props: ['productHeroImageSrc', 'name', 'link', 'price', 'reviews'],
+  props: ['id','productHeroImageSrc', 'name', 'link', 'price', 'reviews'],
+  data() {
+    return {
+      productName: ""
+    }
+  },
+  mounted() {
+    this.productName = decode(this.name);
+  },
   computed: {
-    stars() {
-      return 5;
+    stars() { return [{opacity:.25},{opacity:.25},{opacity:.25},{opacity:.25},{opacity:.25}]
     },
     msrp() {
       return `$${this.price.low}-$${this.price.high}`;

@@ -1,5 +1,6 @@
 import {
   PRODUCTS,
+  PRODUCT_BY_ID,
   SET_PRODUCTS,
   SERVER_INIT } from '@/lib/types';
 
@@ -14,7 +15,7 @@ export const state = () => ({
 export const mutations = {
   [SET_PRODUCTS](state, products) {
     state.groups = products.groups;
-    state.products = products.groups.map((value, index) => ({ name: value.name, link: value.links.www, reviews: { total: value.reviews.reviewCount, average: value.reviews.averageRating}, prices: value.priceRange.selling, heroImageSrc: value.hero.href }));
+    state.products = products.groups.map((value, index) => ({ id: value.id, name: value.name, link: value.links.www, reviews: { total: value.reviews.reviewCount, average: value.reviews.averageRating}, prices: value.priceRange.selling, heroImageSrc: value.hero.href }));
   }
 }
 
@@ -28,5 +29,8 @@ export const actions = {
 export const getters = {
   [PRODUCTS](state) {
     return state.products;
+  },
+  [PRODUCT_BY_ID]: (state) => (id) => {
+    return state.groups.find(item => item.id === id)
   }
 }
