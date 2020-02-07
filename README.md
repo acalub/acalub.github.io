@@ -1,11 +1,41 @@
-# STATIC
+# acalub.github.io
 
-**This directory is not required, you can delete it if you don't want to use it.**
+William Sonoma Coding Challenge | 2/7/20
 
-This directory contains your static files.
-Each file inside this directory is mapped to `/`.
-Thus you'd want to delete this README.md before deploying to production.
+This coding challenge was implemented using [Nuxt](https://nuxtjs.org) and [Vuetify](https://vuetify.js)
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+The completed exercise is live at [acalub.github.io](https://acalub.github.io), responsive for mobile devices
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/assets#static).
+Application is precompiled for SEO purposes
+
+If you would like to browse the code and/or run locally the repo is located [here](https://github.com/acalub/acalub.github.io)
+
+development branch is source
+
+master branch is dist contents moved to root and pushed to github for acalub.github.io to work
+
+
+## Build Setup
+
+``` bash
+# install dependencies
+$ npm run install
+
+# must be in development branch
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# must be in development branch
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# just tests
+$ npm test
+
+# must be in development branch
+# generate static project
+$ npm run generate
+cd into dist python -m SimpleHTTPServer
+```
+
