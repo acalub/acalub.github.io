@@ -30,6 +30,9 @@ $ npm run dev
 $ npm run build
 $ npm run start
 
+# just tests
+$ npm test
+
 # must be in development branch
 # generate static project
 $ npm run generate

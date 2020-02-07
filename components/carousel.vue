@@ -8,8 +8,8 @@
       </v-col>
     </v-row>
     <v-row no-gutters>
-      <v-col cols="12" md="8" offset-md="2" class="carousel-col carousel-body pt-0 px-2">
-        <h4>{{name}}</h4>
+      <v-col cols="12" md="8" offset-md="2" class="carousel-col carousel-body pt-0 px-2 pb-2">
+        <h4 class="mb-2">{{name}}</h4>
 				 <v-carousel
 					cycle
 					height="auto"
@@ -48,6 +48,9 @@ export default {
 
 </script>
 <style lang="scss">
+  .v-carousel__item {
+    border-radius: 0px 0px 10px 10px;
+  }
   .v-overlay__content {
     width: 100% !important;
   }

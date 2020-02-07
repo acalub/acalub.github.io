@@ -21,6 +21,7 @@ export const mutations = {
 
 export const actions = {
   async [SERVER_INIT]({ commit }) {
+    console.log('here');
     const products =  await productAPI.fetch();
     commit(SET_PRODUCTS, products);
   }

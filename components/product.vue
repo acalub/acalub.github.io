@@ -28,6 +28,7 @@ export default {
     this.productName = decode(this.name);
   },
   computed: {
+    // placeholder, doesn't look like we have any review data
     stars() { return [{opacity:.25},{opacity:.25},{opacity:.25},{opacity:.25},{opacity:.25}]
     },
     msrp() {
