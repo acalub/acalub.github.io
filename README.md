@@ -30,12 +30,15 @@ $ npm run dev
 $ npm run build
 $ npm run start
 
-# just tests
+# jest tests
 $ npm test
 
 # must be in development branch
 # generate static project
 $ npm run generate
-cd into dist python -m SimpleHTTPServer
+#cd into dist
+$ cd dist/
+#Run simple server to run app
+$python -m SimpleHTTPServer
 ```
 
