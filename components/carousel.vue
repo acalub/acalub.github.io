@@ -1,14 +1,14 @@
 <template>
   <v-container fluid>
     <v-row dense no-gutters>
-      <v-col cols="12" md="8" offset-md="2" class="carousel-col carousel-close-col pa-0">
+      <v-col cols="12" md="8" offset-md="2" lg="4" offset-lg="4" class="carousel-col carousel-close-col pa-0">
         <v-btn icon @click="$emit('close', true)">
           <v-icon style="color:black">mdi-close</v-icon>
         </v-btn>
       </v-col>
     </v-row>
     <v-row no-gutters>
-      <v-col cols="12" md="8" offset-md="2" class="carousel-col carousel-body pt-0 px-2 pb-2">
+      <v-col cols="12" md="8" offset-md="2" lg="4" offset-lg="4" class="carousel-col carousel-body pt-0 px-2 pb-2">
         <h4 class="mb-2">{{name}}</h4>
 				 <v-carousel
 					cycle
