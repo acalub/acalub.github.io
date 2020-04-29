@@ -87,8 +87,8 @@ export default {
     align-items: center;
     & > div.r {
 
-      width: 400px;
-      height: 400px;
+      width: 45%;
+      height: 30%;
       background-image: url('/images/roku.svg');
       background-size: contain;
       background-repeat: no-repeat;
