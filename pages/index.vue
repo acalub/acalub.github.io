@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="name-plate">
-      <div class="r"></div>
-    </div>
     <canvas id="roku"></canvas>
   </div>
 </template>
